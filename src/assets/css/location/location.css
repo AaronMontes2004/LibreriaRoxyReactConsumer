@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root{
+    --background-gradient: linear-gradient(to right top, rgb(214, 255, 89) 0%, rgb(232, 252, 173) 25%, rgb(250, 192, 104) 50%, rgb(252, 217, 165) 75%, rgb(214, 255, 89) 100%);
+    --light-orange-color: rgb(255,164,032);
+    --lemon-green-color: rgb(175, 231, 4);
+    --faded-orange-color: rgb(255,164,032);
+    --background-image-menu: linear-gradient(120deg, rgb(237, 248, 198) 0%, rgb(254, 255, 204) , rgb(255, 236, 210) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #EAEBEF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menuLocation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1px;
+}
+
+.menuLocation__title{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 40px;
+    font-family: inherit;
+    font-weight: bold;
+    filter: drop-shadow(0 0 12px var(--light-orange-color));
+    margin: 20px 0;
+    width: 100%;
+}
+
+.menuLocation__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.1px;
+}
+
+.getLocation{
+    width: 55%;
+    position: relative;
+    height: auto;
+    padding: .1px 0;
+}
+
+.spaceLocation{
+    height: 25px;
+    width: 100%;
+}
+
+.addLocation{
+    width: 35%;
+}
+
+/* GET Location */
+
+.getLocation__table{
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 2px -2px 15px -9px black;   
+}
+
+/* .getLocation__head{
+    
+} */
+
+/* .getLocation__head{
+    border-radius: 10px;
+} */
+
+.getLocation__headrow{
+    background-color: var(--light-orange-color);
+    text-align: center;
+}
+
+.getLocation__bodyrow{
+    background-color: rgb(250, 240, 225);
+    text-align: center;
+}
+
+.getLocation__headcolumn, .getLocation__bodycolumn{
+    border: .1px solid rgb(121, 120, 120);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.getLocation__headcolumn{
+    padding: 12px 15px;
+}
+
+.getLocation__bodycolumn{
+    padding: 8px 10px;
+}
+
+.getLocation__bodycolumn{
+    border-bottom: 1px solid #969696;
+}
+
+/* .getLocation__bodyrow:nth-of-type(even){
+    background: rgb(253, 228, 190);
+} */
+
+.getLocation__bodyrow--disabled{
+    background-color: rgb(201, 196, 196);
+}
+
+/* .getLocation__bodyrow--disabled:nth-of-type(even){
+    background-color: rgb(201, 196, 196);
+}
+ */
+
+.getLocation__bodycheck{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.getLocation__bodycheck:hover{
+    box-shadow: 0 0 15px -3px var(--light-orange-color);
+}
+
+.getLocation__bodybtn{
+    border: 1px solid rgb(99, 98, 98);
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: var(--lemon-green-color);
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+}
+
+.getLocation__bodybtn:hover{
+    transform: scale(1.05);
+}
+
+/* ADD Location */
+
+.addLocation__form{
+    width: 100%;
+    background-color: var(--lemon-green-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .1px;
+    border: .1px solid rgb(155, 154, 154);
+    box-shadow: 2px -2px 15px -9px black;
+}
+
+.addLocation__container{
+    width: 90%;
+    margin: 15px 10px;
+}
+
+.addLocation__input{
+    margin-top: 7px;
+    padding: 12px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+    border: .1px solid rgb(85, 85, 85);
+}
+
+.addLocation__btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--light-orange-color);
+    border: .1px solid rgb(105, 105, 105);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+}
+
+.addLocation__input::placeholder{
+    font-size: 15px;
+}
+
+.addLocation__title{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.addLocation__btn:hover{
+    transform: scale(1.04);
+}

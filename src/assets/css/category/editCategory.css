@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+
+:root{
+    --light-orange-color: rgb(255,164,032);
+    --lemon-green-color: rgb(191, 255, 0);
+    --faded-orange-color: rgb(250, 192, 104);
+    --gray: rgb(194, 192, 192);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.editCategory{
+    --opacity-background: rgba(0, 0, 0, 0);
+    --traslate-form: translateY(-100vh);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--opacity-background);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 5000;
+    transition-duration: .7s;
+}
+
+.editCategory__form{
+    border-radius: 10px;
+    width: 35%;
+    height: 50%;
+    max-height: 200px;
+    max-width: 700px;
+    min-height: 150px;
+    min-width: 500px;
+    background-color: var(--lemon-green-color);
+    position: relative;
+    display: flex;
+    transform: var(--traslate-form);
+    align-items: center;
+    justify-content: center;
+    padding: .1px;
+    border: .1px solid rgb(155, 154, 154);
+    box-shadow: 2px -2px 15px -9px black;
+    transition-delay: .1s;
+    transition-duration: .9s;
+}
+
+.editCategory__container{
+    width: 90%;
+    margin: 15px 10px;
+}
+
+.editCategory__input{
+    margin-top: 7px;
+    padding: 16px 12px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    background-color: #fff;
+    border: .1px solid rgb(85, 85, 85);
+}
+
+.editCategory__btn{
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--light-orange-color);
+    border: .1px solid rgb(105, 105, 105);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+}
+
+.editCategory__input::placeholder{
+    font-size: 17px;
+}
+
+.editCategory__title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.editCategory__btn:hover{
+    transform: scale(1.04);
+}
+
+.editCategory--show{
+    --opacity-background: rgba(0, 0, 0, 0.5);
+    --traslate-form: translateY(0);
+    pointer-events: unset;
+}
+
+.editCategory__btn--cancel{
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: var(--gray);
+    border: .1px solid rgb(105, 105, 105);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+}
+
+.editCategory__btn--cancel:hover{
+    transform: scale(1.04);
+}

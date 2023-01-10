@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+
+:root{
+    --light-orange-color: rgb(255,164,032);
+    --lemon-green-color: rgb(191, 255, 0);
+    --faded-orange-color: rgb(250, 192, 104);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.modalMessage{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --animacion-modal: translateY(-100vh);
+    pointer-events: none;
+    z-index: 5000;
+}
+
+.modalMessage__container{
+    width: 90%;
+    max-width: 450px;
+    min-width: 200px;
+    height: 225px;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    background-color: white;
+    align-content: center;
+    padding: 15px 10px;
+    transition-duration: .5s;
+    transform: var(--animacion-modal);
+    border: 1px solid rgb(141, 140, 140);
+}
+
+.modalMessage__container--show{
+    pointer-events: unset;
+    --animacion-modal: translateY(0);
+}
+
+.modalMessage__img{
+    width: 110px;
+    height: 110px;
+    justify-self: center;
+    align-self: center;
+}
+
+.modalMessage__text{
+    width: 90%;
+    font-weight: 400;
+    font-size: 18px;
+    justify-self: flex-start;
+    text-align: start;
+    align-self: center;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 700px) {
+
+    .modalMessage__container {
+        width: 300px;
+        height: auto;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .modalMessage__img{
+        width: 65px;
+        height: 65px;
+    }
+
+    .modalMessage__text{
+        padding-top: 10px;
+        justify-self: center;
+        text-align: center;
+        width: 70%;
+        height: auto;
+        font-size: 15px;
+    }
+}
