@@ -3,6 +3,8 @@ import CategoryState from './components/contexts/category/CategoryState'
 import LocationState, { LocationContext } from './components/contexts/location/LocationState'
 import ProductState from './components/contexts/product/ProductState'
 import ProviderState from './components/contexts/provider/ProviderState'
+import PurchaseState from './components/contexts/purchase/PurchaseState'
+import SaleState from './components/contexts/sale/SaleState'
 import UserState from './components/contexts/user/UserState'
 import Category from './components/pages/category/Category'
 import GetCategory from './components/pages/category/GetCategory'
@@ -14,6 +16,11 @@ import AddProduct from './components/pages/product/AddProduct'
 import GetProduct from './components/pages/product/GetProduct'
 import AddProvider from './components/pages/provider/AddProvider'
 import GetProvider from './components/pages/provider/GetProvider'
+import AddPurchase from './components/pages/purchase/AddPurchase'
+import GetPurchase from './components/pages/purchase/GetPurchase'
+import GetPurchaseDetailByIdPurchase from './components/pages/purchase/GetPurchaseDetailByIdPurchase'
+import AddSale from './components/pages/sale/AddSale'
+import GetSale from './components/pages/sale/GetSale'
 import Login from './components/pages/users/Login'
 import Signin from './components/pages/users/Signin'
 
@@ -43,6 +50,15 @@ function App() {
               <Route element={<ProviderState/>}>
                 <Route path='/registro-proveedor' element={<AddProvider/>} />
                 <Route path='/consulta-proveedores' element={<GetProvider/>} />
+              </Route>
+              <Route element={<PurchaseState/>}>
+                <Route path='/registro-compra' element={<AddPurchase/>}/>
+                <Route path='/consulta-compras' element={<GetPurchase/>}/>
+                <Route path='/consulta-compras/:idCompra' element={<GetPurchaseDetailByIdPurchase/>} />
+              </Route>
+              <Route element={<SaleState/>}>
+                <Route path='/registro-venta' element={<AddSale/>} />
+                <Route path='/consulta-ventas' element={<GetSale/>} />
               </Route>
             </Route>
           </Route>

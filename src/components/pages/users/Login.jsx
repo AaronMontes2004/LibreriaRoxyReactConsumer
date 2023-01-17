@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../contexts/user/UserState';
 import "../../../assets/css/user/login.css"
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { request } from '../../libs/urlConsumer';
 import MessageModal from '../../modal/MessageModal';
 
 const Login = () => {
 
   //const context = useContext(UserContext);
+
+  let navigate = useNavigate()
 
   const [activeModal, setActiveModal] = useState(false);
   const [status, setStatus] = useState("");
@@ -38,6 +40,7 @@ const Login = () => {
         if(data.data.status === "OK"){
           setTimeout(() => {
             console.log("SUCCESS");
+            navigate("/")
           },1000)
         }
       }, 1750);
