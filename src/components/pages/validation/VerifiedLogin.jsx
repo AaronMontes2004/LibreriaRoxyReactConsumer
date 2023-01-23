@@ -9,7 +9,7 @@ const VerifiedLogin = () => {
   const validationLogin = async () => {
     const user = window.localStorage.getItem("UserLogin");
     if (!user) {
-      navigateLogin("/login")
+      navigateLogin("/iniciar-sesion")
     }
 
     const data = await request.post("user/verifyToken", {
@@ -20,11 +20,11 @@ const VerifiedLogin = () => {
 
     if (data?.data?.status === "FAILED"){
       window.localStorage.removeItem("UserLogin");
-      navigateLogin("/login");
+      navigateLogin("/iniciar-sesion");
     }
 
     if (data?.data?.status === "DANGER"){
-      navigateLogin("/login")
+      navigateLogin("/iniciar-sesion")
     }
 
   }
