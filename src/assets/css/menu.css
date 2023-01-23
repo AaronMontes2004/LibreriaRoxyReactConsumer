@@ -34,7 +34,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #EAEBEF;
 }
 
 .navHeader__container{
@@ -57,7 +56,7 @@ body{
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
-    color: #EAEBEF;
+    color: #ffffff;
 }
 
 .navOptions__link{
