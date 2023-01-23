@@ -54,7 +54,7 @@ const GetPurchaseDetailByIdPurchase = () => {
             <tbody className='getPurchase__body'>
               {
                 purchaseDetail.map((p, i) => (
-                <tr key={p.numCompra} className={'getPurchase__bodyrow'} /* className={!p.estadoPurchaseo ? 'getPurchase__bodyrow getPurchase__bodyrow--disabled': 'getPurchase__bodyrow'} */>
+                <tr key={p.numCompra} className={'getPurchase__bodyrow'} >
                   <td className='getPurchase__bodycolumn'>{i+1}</td>
                   <td className='getPurchase__bodycolumn'>{p.nombreProducto}</td>
                   <td className='getPurchase__bodycolumn'>{new Date(p.fechaCompra).toLocaleDateString()}</td>

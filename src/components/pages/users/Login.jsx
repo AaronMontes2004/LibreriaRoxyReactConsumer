@@ -38,10 +38,11 @@ const Login = () => {
       setTimeout(() => {
         setActiveModal(false);
         if(data.data.status === "OK"){
+          window.localStorage.setItem("UserLogin", JSON.stringify(data.data.data))
           setTimeout(() => {
             console.log("SUCCESS");
             navigate("/")
-          },1000)
+          },500)
         }
       }, 1750);
     } catch (error) {

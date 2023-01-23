@@ -24,11 +24,13 @@ const MakeASale = () => {
       mes='0'+mes
 
     date.value = ano + "-" + mes + "-" + dia;
+    
+    setDateSale(ano + "-" + mes + "-" + dia)
   },[])
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log(dateSale);
-  }, [dateSale])
+  }, [dateSale]) */
 
   return (
     <>

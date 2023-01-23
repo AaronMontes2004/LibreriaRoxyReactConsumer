@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+
+:root{
+    --light-orange-color: rgb(255,164,032);
+    --lemon-green-color: rgb(191, 255, 0);
+    --faded-orange-color: rgb(250, 192, 104);
+    --gray: rgb(194, 192, 192);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.showTicket{
+    --opacity-background: rgba(0, 0, 0, 0);
+    --traslate-form: translateY(-100vh);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--opacity-background);
+    position: fixed;
+    pointer-events: none;
+    z-index: 5000;
+    transition-duration: .7s;
+    padding: .1px;
+    overflow: auto;
+}
+
+.showTicket__index{
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.showTicket__form{
+    position: relative;
+    border-radius: 10px;
+    width: 60%;
+    height: auto;
+    max-width: 1200px;
+    min-width: 800px;
+    background-color: var(--lemon-green-color);
+    display: flex;
+    transform: var(--traslate-form);
+    align-items: center;
+    justify-content: center;
+    padding: .1px;
+    border: .1px solid rgb(155, 154, 154);
+    box-shadow: 2px -2px 15px -9px black;
+    transition-delay: .1s;
+    transition-duration: .9s;
+}
+
+.showTicket__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.showTicket--show{
+    --opacity-background: rgba(0, 0, 0, 0.5);
+    --traslate-form: translateY(0);
+    pointer-events: unset;
+}
+
+.showTicket__content1{
+    width: 90%;
+    margin: 10px 0;
+}
+
+.showTicket__content2{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.showTicket__content3{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.showTicket__content4{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.showTicket__contentText{
+    width: 90%;
+}
+
+.showTicket__title{
+    width: 100%;
+    margin: 5px 0;
+}
+
+.showTicket__name{
+    margin: 15px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+}
+
+.showTicket__text--title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.showTicket__text--text{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.showTicket__table{
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.showTicket__thead{
+    background-color: var(--light-orange-color);
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.showTicket__tbody{
+    background-color: rgb(250, 229, 196);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.showTicket__th{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: .1px solid rgb(121, 120, 120);
+}
+
+.showTicket__td{
+    font-size: 17px;
+    padding: 12px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: .1px solid rgb(121, 120, 120);
+}
+
+.showTicket__finalData{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #000;
+}
+
+.showTicket__data{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 20px 10px 20px;
+}
+
+.showTicket__prices{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 10px 20px;
+}
+
+.showTicket__textData{
+    font-size: 20px;
+}
+
+.showTicket__content5{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showTicket__btnCloseTicket{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: .5px solid rgb(90, 90, 90);
+    background-color: var(--light-orange-color);
+    transition-duration: .3s;
+    transition-property: transform;
+}
+
+.showTicket__btnCloseTicket:hover{
+    transform: scale(1.05);
+}

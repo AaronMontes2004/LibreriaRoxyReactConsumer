@@ -6,7 +6,7 @@ import SearchProductsPurchase from './SearchProductsPurchase'
 const AddPurchase = () => {
   return (
     <div className='addPurchase'>
-      <h1 className="addPurchase__title">Regitro de compra</h1>
+      <h1 className="addPurchase__title">Registro de compra</h1>
       <div className="addPurchase__container">
         <SearchProductsPurchase/>
         <MakeAPurchase/>

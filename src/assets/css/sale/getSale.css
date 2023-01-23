@@ -19,186 +19,167 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.menuLocation{
+.getSale{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    padding: 0.1px;
+    align-items: center;
+    overflow: auto;
+}
+
+.getSale__container{
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0.1px;
+    align-items: center;
+    overflow: auto;
+    min-width: 1000px;
 }
 
-.menuLocation__title{
+.getSale__title{
     text-align: center;
-    padding: 10px 0;
     font-size: 40px;
     font-family: inherit;
     font-weight: bold;
     filter: drop-shadow(0 0 12px var(--light-orange-color));
-    margin: 20px 0;
+    margin: 25px 0;
     width: 100%;
+    height: 10%;
 }
 
-.menuLocation__container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0.1px;
-}
-
-.getLocation{
-    width: 55%;
+.getSale__content{
     position: relative;
+    width: 90%;
+    height: 80%;
     height: auto;
-    padding: .1px 0;
-    max-width: 900px;
+    padding: .1px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.spaceLocation{
-    height: 25px;
-    width: 100%;
-}
-
-.addLocation{
-    width: 35%;
-    max-width: 900px;
-}
-
-/* GET Location */
-
-.getLocation__table{
+.getSale__table{
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 2px -2px 15px -9px black;   
+    box-shadow: 2px -2px 15px -9px black;  
+    max-width: 1200px;
 }
 
-/* .getLocation__head{
+/* .getSale__head{
     
 } */
 
-/* .getLocation__head{
+/* .getSale__head{
     border-radius: 10px;
 } */
 
-.getLocation__headrow{
+.getSale__headrow{
     background-color: var(--light-orange-color);
     text-align: center;
 }
 
-.getLocation__bodyrow{
+.getSale__nameData{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+.getSale__bodyrow{
     background-color: rgb(250, 240, 225);
     text-align: center;
 }
 
-.getLocation__headcolumn, .getLocation__bodycolumn{
+.getSale__headcolumn, .getSale__bodycolumn{
     border: .1px solid rgb(121, 120, 120);
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.getLocation__headcolumn{
+.getSale__headcolumn{
     padding: 12px 15px;
 }
 
-.getLocation__bodycolumn{
+.getSale__bodycolumn{
     padding: 8px 10px;
 }
 
-.getLocation__bodycolumn{
+.getSale__bodycolumn{
     border-bottom: 1px solid #969696;
+    gap: 10px;
 }
 
-/* .getLocation__bodyrow:nth-of-type(even){
+/* .getSale__bodyrow:nth-of-type(even){
     background: rgb(253, 228, 190);
 } */
 
-.getLocation__bodyrow--disabled{
+.getSale__bodyrow--disabled{
     background-color: rgb(201, 196, 196);
 }
 
-/* .getLocation__bodyrow--disabled:nth-of-type(even){
+/* .getSale__bodyrow--disabled:nth-of-type(even){
     background-color: rgb(201, 196, 196);
 }
  */
 
-.getLocation__bodycheck{
+.getSale__bodycheck{
     width: 20px;
     height: 20px;
     cursor: pointer;
     transition-duration: .2s;
 }
 
-.getLocation__bodycheck:hover{
+.getSale__bodycheck:hover{
     box-shadow: 0 0 15px -3px var(--light-orange-color);
 }
 
-.getLocation__bodybtn{
+.getSale__bodybtn{
     border: 1px solid rgb(99, 98, 98);
     padding: 10px 25px;
-    font-size: 13px;
     font-weight: bold;
     border-radius: 15px;
     background-color: var(--lemon-green-color);
     cursor: pointer;
     transition-property: transform;
     transition-duration: .2s;
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
 }
 
-.getLocation__bodybtn:hover{
+.getSale__bodybtn:hover{
     transform: scale(1.05);
 }
 
-/* ADD Location */
-
-.addLocation__form{
-    width: 100%;
-    background-color: var(--lemon-green-color);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .1px;
-    border: .1px solid rgb(155, 154, 154);
-    box-shadow: 2px -2px 15px -9px black;
-}
-
-.addLocation__container{
-    width: 90%;
-    margin: 15px 10px;
-}
-
-.addLocation__input{
-    margin-top: 7px;
-    padding: 12px;
-    width: 100%;
-    outline: none;
-    font-size: 14px;
-    background-color: #fff;
-    border: .1px solid rgb(85, 85, 85);
-}
-
-.addLocation__btn{
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: var(--light-orange-color);
-    border: .1px solid rgb(105, 105, 105);
+.getSale__bodybtn--details{
+    border: 1px solid rgb(99, 98, 98);
+    display: inline-block;
+    padding: 8px 20px;
     font-weight: bold;
-    font-size: 14px;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: var(--faded-orange-color);
     cursor: pointer;
     transition-property: transform;
     transition-duration: .2s;
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 
-.addLocation__input::placeholder{
-    font-size: 15px;
+.getSale__bodybtn--details:hover{
+    transform: scale(1.05);
 }
 
-.addLocation__title{
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.addLocation__btn:hover{
-    transform: scale(1.04);
+.spaceSale{
+    height: 25px;
+    width: 100%;
+    max-width: 700px;
 }

@@ -3,7 +3,7 @@ import { SaleContext } from '../../contexts/sale/SaleState';
 
 const ListProductsSale = () => {
 
-    const { deleteProductList, productSalesList, handleChangePrice } = useContext(SaleContext);
+    const { deleteProductList, productSalesList, handleChangePrice, handleChangeKindMeasure } = useContext(SaleContext);
 
   return (
     <>
@@ -13,26 +13,31 @@ const ListProductsSale = () => {
                     <h1>NO HAY PRODUCTOS</h1>
                 ) : (
                     productSalesList.map((p, i) => (
-                        <div key={i+1} className="listProductsSale__card">
+                        <div key={i} className="listProductsSale__card">
                             <div className="listProductsSale__nameProduct">
                                 <p title={p.nombreProducto} className='listProductsSale__nameProduct--text'>{p.nombreProducto}</p>
                             </div>
                             <div className="listProductsSale__cantidadProduct">
-                                <input min={1} defaultValue={1} type="number" className='listProductsSale__cantidadProduct--input' onChange={(e) => {handleChangePrice(e.target.value, i)}}/>
+                                <input min={1} type="number" 
+                                defaultValue={1}
+                               /*  value={p.cantidadPedido} */
+                                className='listProductsSale__cantidadProduct--input' onChange={(e) => {handleChangePrice(e.target.value, p.idProducto)}}/>
                             </div>
                             <div className="listProductsSale__tipoMedida">
-                                <select defaultValue={null} name="tipoMedida" id="" className='listProductsSale__tipoMedida--select'>
-                                    <option value={null}>UND</option>
+                                <select defaultValue="und" name="tipoMedida" id="" className='listProductsSale__tipoMedida--select' onChange={(e)=>{
+                                    handleChangeKindMeasure(e.target.value, p.idProducto)
+                                }}>
+                                    <option value="und">UND</option>
                                     {p.tipoMedida === "CM" || p.tipoMedida === "cm" ? <option value="cm">CM</option> : ""}
                                     {p.tipoMedida === "M" || p.tipoMedida === "m" ? <option value="m">M</option> : ""}
                                 </select>
                             </div>
                             <div className="listProductsSale__precioProduct">
-                                <p className='listProductsSale__nameProduct--text'>{p.precioPedido}</p>
-                            </div>
+                                <p className='listProductsSale__nameProduct--text'>{"S/ "+parseFloat(p?.precioPedido).toFixed(2)}</p>
+                            </div> 
                             <div className="listProductsSale__btn">
-                                <button className='listProductsSale__btn--delete' onClick={() =>{deleteProductList(i)}}>
-                                    <img src="icons/trash.svg" className='listProductsSale__icon' alt="" />
+                                <button className='listProductsSale__btn--delete' onClick={() =>{deleteProductList(p.idProducto)}}>
+                                    <img src="icons/trash.svg" className='listProductsSale__icon' alt="trash" />
                                 </button>
                             </div>
                         </div>

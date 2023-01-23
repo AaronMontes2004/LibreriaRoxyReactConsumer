@@ -120,3 +120,34 @@ input:-webkit-autofill {
 input:-webkit-autofill {
     -webkit-text-fill-color: #000;
 }
+
+@media (min-width: 1600px){
+    .login__container{
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .login__title{
+        font-size: 35px;
+    }
+
+    .login__input{
+        font-size: 20px;
+    }
+
+    .login__input::placeholder{
+        font-size: 20px;
+    }
+
+    .login__button{
+        font-size: 25px;
+    }
+
+    .login__link{
+        font-size: 20px;
+    }
+    
+    .login__recover{
+        font-size: 20px;
+    }
+}

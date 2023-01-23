@@ -62,6 +62,7 @@ body{
 
 .addCategory{
     width: 35%;
+    max-width: 900px;
 }
 
 /* GET CATEGORY */

@@ -132,16 +132,11 @@ const Menu = () => {
                         </li>
                     </ul>
                 </li>
-                <li className='list__item list__item--click'>
-                    <div className="list__button">
-                        <img src={category} alt="Categoria" className="list__img" />
-                        <Link to={"/categoria"} className='navOptions__link'>Categoria</Link>
-                    </div>
-                </li>
+                
                 <li className='list__item list__item--click'>
                     <div className="list__button"> {/* list__button--click */}
                         <img src={ticket} alt="Boleta" className="list__img" />
-                        <a href="#" className='navOptions__link'>Boleta</a>
+                        <Link to={"/boleta"} className='navOptions__link'>Boleta</Link>
                         {/* <img src="icons/arrow.svg" alt="Flecha" className="list__arrow"/> */}
                     </div>
                     {/* <ul className="list__show">
@@ -149,6 +144,13 @@ const Menu = () => {
                             <a href="#" className="navOptions__link navOptions__link--inside">Consulta Boleta</a>
                         </li>
                     </ul> */}
+                </li>
+
+                <li className='list__item list__item--click'>
+                    <div className="list__button">
+                        <img src={category} alt="Categoria" className="list__img" />
+                        <Link to={"/categoria"} className='navOptions__link'>Categoria</Link>
+                    </div>
                 </li>
                 {/* <li className='list__item list__item--click'>
                     <div className="list__button"> 

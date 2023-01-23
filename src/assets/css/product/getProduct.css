@@ -87,7 +87,8 @@ body{
     width: 100%;
     border-collapse: collapse;
     box-shadow: 2px -2px 15px -9px black;  
-    max-width: 1200px;
+    max-width: 1400px;
+    table-layout: fixed;
 }
 
 /* .getProduct__head{
@@ -110,8 +111,8 @@ body{
 
 .getProduct__headcolumn, .getProduct__bodycolumn{
     border: .1px solid rgb(121, 120, 120);
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .getProduct__headcolumn{

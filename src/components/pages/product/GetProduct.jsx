@@ -32,32 +32,32 @@ const GetProduct = () => {
           <table className='getProduct__table'>
             <thead className='getProduct__head'>
               <tr className='getProduct__headrow'>
-                <th className='getProduct__headcolumn'>Id</th>
-                <th className='getProduct__headcolumn'>Nombre</th>
-                <th className='getProduct__headcolumn'>Stock</th>
-                <th className='getProduct__headcolumn'>Precio compra</th>
-                <th className='getProduct__headcolumn'>Precio venta</th>
-                <th className='getProduct__headcolumn'>Ubicación</th>
-                <th className='getProduct__headcolumn'>Categoria</th>
-                <th className='getProduct__headcolumn'>Estado</th>
-                <th className='getProduct__headcolumn'>Opciones</th>
+                <th className='getProduct__headcolumn' style={{width: "5%"}}>Id</th>
+                <th className='getProduct__headcolumn' style={{width: "20%"}}>Nombre</th>
+                <th className='getProduct__headcolumn' style={{width: "15%"}}>Stock</th>
+                <th className='getProduct__headcolumn' style={{width: "10%"}}>Precio compra</th>
+                <th className='getProduct__headcolumn' style={{width: "10%"}}>Precio venta</th>
+                <th className='getProduct__headcolumn' style={{width: "5%"}}>Ubicación</th>
+                <th className='getProduct__headcolumn' style={{width: "10%"}}>Categoria</th>
+                <th className='getProduct__headcolumn' style={{width: "10%"}}>Estado</th>
+                <th className='getProduct__headcolumn' style={{width: "10%"}}>Opciones</th>
               </tr>
             </thead>
             <tbody className='getProduct__body'>
               {
                 productList.map((p, i) => (
                 <tr key={p.idProducto} className={!p.estadoProducto ? 'getProduct__bodyrow getProduct__bodyrow--disabled': 'getProduct__bodyrow'}>
-                  <td className='getProduct__bodycolumn'>{i+1}</td>
-                  <td className='getProduct__bodycolumn'>{p.nombreProducto}</td>
-                  <td className='getProduct__bodycolumn'>{p.stockProducto}</td>
-                  <td className='getProduct__bodycolumn'>{p.precioCProducto}</td>
-                  <td className='getProduct__bodycolumn'>{p.precioVProducto}</td>
-                  <td className='getProduct__bodycolumn'>{p.nombreUbicacion}</td>
-                  <td className='getProduct__bodycolumn'>{p.nombreCategoria}</td>
-                  <td className='getProduct__bodycolumn'>
+                  <td className='getProduct__bodycolumn' >{p.idProducto}</td>
+                  <td className='getProduct__bodycolumn' >{p.nombreProducto}</td>
+                  <td className='getProduct__bodycolumn' >{p.stockProducto+" unidades "+(p.medidaHabilitada ? (p.cantidadMedida == 0 || p.cantidadMedida == "" ? "" : (p.tipoMedida == "cm" || p.tipoMedida == "CM" ? "con "+p.cantidadMedida + " centimetros" : "con "+p.cantidadMedida + " metros")) : "")}</td>
+                  <td className='getProduct__bodycolumn' >{p.precioCProducto}</td>
+                  <td className='getProduct__bodycolumn' >{p.precioVProducto}</td>
+                  <td className='getProduct__bodycolumn' >{p.nombreUbicacion}</td>
+                  <td className='getProduct__bodycolumn' >{p.nombreCategoria}</td>
+                  <td className='getProduct__bodycolumn' >
                     <input onChange={() => functionChangeStatus(p.idProducto)} defaultChecked={p.estadoProducto ? true : false} type="checkbox" className='getProduct__bodycheck'/>
                   </td>
-                  <td className='getProduct__bodycolumn'>
+                  <td className='getProduct__bodycolumn' >
                     <button disabled={!p.estadoProducto ? true : false} className='getProduct__bodybtn' onClick={() => {openEditProduct(p)}}>Editar</button>
                   </td>
               </tr>))

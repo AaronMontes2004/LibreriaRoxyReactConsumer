@@ -1,13 +1,10 @@
-import React, { useContext, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
-import "../../../assets/css/category/category.css";
+import React, { useEffect } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom';
 import { request } from '../../libs/urlConsumer';
-import AddCategory from './AddCategory';
-import GetCategory from './GetCategory';
 
-const MenuCategory = () => {
+const VerifiedLogin = () => {
 
-  const navigateLogin = useNavigate();
+    const navigateLogin = useNavigate();
 
   const validationLogin = async () => {
     const user = window.localStorage.getItem("UserLogin");
@@ -34,19 +31,13 @@ const MenuCategory = () => {
 
   useEffect(() => {
     validationLogin();
-  }, [])
+  })
 
   return (
     <>
-        <div className='menuCategory'>
-            <h1 className='menuCategory__title'>Registro y consulta de categoria</h1>
-            <div className='menuCategory__container'>
-                <AddCategory/>
-                <GetCategory/>
-            </div>
-        </div>
+        <Outlet/>
     </>
   )
 }
 
-export default MenuCategory
+export default VerifiedLogin
