@@ -34,7 +34,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<UserState/>}>
-            <Route path='/login' element={<Login/>}/>
+            <Route index path='/login' element={<Login/>}/>
           </Route>
           <Route element={<VerifiedLogin/>} >
             <Route element={<ConfigMenu/>}>

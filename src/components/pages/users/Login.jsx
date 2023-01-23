@@ -50,6 +50,9 @@ const Login = () => {
         setStatus("DANGER");
         setMessage("Error interno en el servidor intentalo mas tarde");
         setActiveModal(true)
+        setTimeout(() => {
+          setActiveModal(false);
+        }, 1750);
     }
   }
 
