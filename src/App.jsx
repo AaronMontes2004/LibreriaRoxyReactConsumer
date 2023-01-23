@@ -34,14 +34,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<UserState/>}>
-            <Route index path='/login' element={<Login/>}/>
+            <Route index path='/iniciar-sesion' element={<Login/>}/>
           </Route>
           <Route element={<VerifiedLogin/>} >
             <Route element={<ConfigMenu/>}>
               <Route element={<Menu/>}>
                 <Route path='/' element={<Welcome/>}/>
                 <Route element={<UserState/>}>
-                  <Route path='/signin' element={<Signin/>}/>
+                  <Route path='/registrarse' element={<Signin/>}/>
                 </Route>
                 <Route element={<CategoryState/>}>
                   <Route path='/categoria' element={<MenuCategory/>}/>
