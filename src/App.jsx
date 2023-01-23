@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      
         <Routes>
           <Route element={<UserState/>}>
             <Route index path='/iniciar-sesion' element={<Login/>}/>
@@ -74,7 +74,6 @@ function App() {
             </Route>
           </Route>
         </Routes>
-      </BrowserRouter>
     </>
   )
 }
