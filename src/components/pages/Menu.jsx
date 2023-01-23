@@ -50,7 +50,7 @@ const Menu = () => {
                 <li className='navHeader'>
                     <div className="navHeader__container">
                         <img src={logo} alt="Imagen de buho" className='navHeader__img'/>
-                        <a href="#" className='navHeader__title'>Libreria Roxy</a>
+                        <Link to={"/"} className='navHeader__title'>Libreria Roxy</Link>
                     </div>
                 </li>
                 <li className='list__item list__item--click'>

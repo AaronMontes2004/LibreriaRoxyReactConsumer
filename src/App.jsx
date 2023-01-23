@@ -1,16 +1,14 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CategoryState from './components/contexts/category/CategoryState'
-import LocationState, { LocationContext } from './components/contexts/location/LocationState'
+import LocationState from './components/contexts/location/LocationState'
 import ProductState from './components/contexts/product/ProductState'
 import ProviderState from './components/contexts/provider/ProviderState'
 import PurchaseState from './components/contexts/purchase/PurchaseState'
 import SaleState from './components/contexts/sale/SaleState'
 import TicketState from './components/contexts/ticket/TicketState'
 import UserState from './components/contexts/user/UserState'
-import Category from './components/pages/category/Category'
-import GetCategory from './components/pages/category/GetCategory'
 import MenuCategory from './components/pages/category/MenuCategory'
-import Config from './components/pages/config'
+import ConfigMenu from './components/pages/ConfigMenu'
 import MenuLocation from './components/pages/location/MenuLocation'
 import Menu from './components/pages/menu'
 import AddProduct from './components/pages/product/AddProduct'
@@ -39,7 +37,7 @@ function App() {
             <Route path='/login' element={<Login/>}/>
           </Route>
           <Route element={<VerifiedLogin/>} >
-            <Route element={<Config/>}>
+            <Route element={<ConfigMenu/>}>
               <Route element={<Menu/>}>
                 <Route path='/' element={<Welcome/>}/>
                 <Route element={<UserState/>}>
