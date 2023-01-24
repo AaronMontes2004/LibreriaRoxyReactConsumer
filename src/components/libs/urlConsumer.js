@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const request = axios.create({
-    baseURL: "http://localhost:4000/api/"
+    baseURL: "https://api-libreria-roxy.onrender.com/api/"
 });
